@@ -13,5 +13,7 @@ Tạo các đối tượng của trò chơi:
 - Tạo các đổi tượng phụ: sinh mạng, điểm số.
 - Tạo menu: trên menu có ghi các hướng dẫn cho trò chơi.
 - Tạo âm thanh cho game
+
 Nguồn tham khảo và điểm tự đánh giá được để trong file Readme.txt
+
 Link clip demo game được để trong file ClipDemo(LinkYoutube).txt
