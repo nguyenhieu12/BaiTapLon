@@ -1,4 +1,5 @@
 Game: Space Impact
+
 Tổng quan: game bắn máy bay theo màn hình ngang từ trái sang phải.
 Cách chơi và điều kiện thắng, thua:
 - Sử dụng phím Enter để bắt đầu trò chơi, Escape để thoát khỏi trò chơi.
