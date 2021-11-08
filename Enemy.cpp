@@ -157,7 +157,7 @@ void Enemy::createEnemy(SDL_Renderer* render, Enemy* newEnemy, int numberEnemy)
 }
 
 bool Enemy::enemyAttack(SDL_Renderer* render, SDL_Window* window, Enemy* newEnemy, int numberEnemy,
-	const SDL_Rect& spaceshipRect, vector<Bullet*> bullet_list, Mix_Chunk* explosionSound, Explosion explosion, int& markValue)
+	const SDL_Rect& spaceshipRect, vector<Bullet*> bullet_list, Mix_Chunk* explosionSound, Explosion explosion, int& markValue, Explosion expMain)
 {
 	for (int j = 0; j < numberEnemy; j++)
 	{
@@ -168,6 +168,17 @@ bool Enemy::enemyAttack(SDL_Renderer* render, SDL_Window* window, Enemy* newEnem
 			tempEnemy->enemyRender(render);
 			if (tempEnemy->autoShot(render, SCREEN_WIDTH, SCREEN_HEIGHT, spaceshipRect, explosion))
 			{
+				for (int exp = 0; exp < NUMBER_FRAME; exp++)
+				{
+					int exp_x = spaceshipRect.x - explosion.getExpWidth() * 0.5 + 30;
+					int exp_y = spaceshipRect.y - explosion.getExpHeight() * 0.5 + 30;
+
+					expMain.setExp(exp);
+					expMain.setExpPos(exp_x, exp_y);
+					expMain.expRender(render);
+					SDL_Delay(25);
+					SDL_RenderPresent(render);
+				}
 				return true;
 			}
 			
@@ -175,6 +186,17 @@ bool Enemy::enemyAttack(SDL_Renderer* render, SDL_Window* window, Enemy* newEnem
 
 			if (checkColSpaceAndEnemy(spaceshipRect, tempEnemy->getEnemyRect()))
 			{
+				for (int exp = 0; exp < NUMBER_FRAME; exp++)
+				{
+					int exp_x = spaceshipRect.x - explosion.getExpWidth() * 0.5 + 30;
+					int exp_y = spaceshipRect.y - explosion.getExpHeight() * 0.5 + 30;
+
+					expMain.setExp(exp);
+					expMain.setExpPos(exp_x, exp_y);
+					expMain.expRender(render);
+					SDL_Delay(25);
+					SDL_RenderPresent(render);
+				}
 				return true;
 			}
 		}
