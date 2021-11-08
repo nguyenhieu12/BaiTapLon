@@ -30,7 +30,7 @@ public:
 	void createEnemy(SDL_Renderer* render, Enemy* newEnemy, int numberEnemy);
 
 	bool enemyAttack(SDL_Renderer* render, SDL_Window* window, Enemy* newEnemy, int numberEnemy, const SDL_Rect& spaceshipRect,
-		vector<Bullet*> bullet_list, Mix_Chunk* explosionSound, Explosion explosion, int& markValue);
+		vector<Bullet*> bullet_list, Mix_Chunk* explosionSound, Explosion explosion, int& markValue, Explosion expMain);
 
 	bool checkColSpaceAndEnemy(const SDL_Rect& spaceshipRect, const SDL_Rect& enemyRect);
 
