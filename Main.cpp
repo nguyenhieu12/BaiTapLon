@@ -160,7 +160,7 @@ int main(int argc, char* argv[])
             time.loadFromRenderTex(font, render);
             time.setTexPos(SCREEN_WIDTH - 200, 10);
             time.texRender(render);
-
+            
             string texMark = "Mark: ";
             string currentMark = to_string(markValue);
             texMark += currentMark;
@@ -267,4 +267,3 @@ bool initSDL(SDL_Window*& window, SDL_Renderer*& render)
     }
     return success;
 }
-
